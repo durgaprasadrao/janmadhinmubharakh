@@ -2,93 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday!</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@400;600&display=swap');
 
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #fceabb, #f8b500);
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Open Sans', sans-serif;
-      color: #4b3e2e;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      color: #3e3e3e;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      text-align: center;
       overflow: hidden;
+      text-align: center;
     }
 
     h1 {
       font-family: 'Pacifico', cursive;
-      font-size: 4rem;
-      margin-bottom: 0.2em;
+      font-size: 3rem;
       color: #d94f70;
-      text-shadow: 1px 1px 3px #8b3a47;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 1.5rem;
-      margin: 0 1em 2em;
+      font-size: 1.2rem;
       max-width: 600px;
+      margin-bottom: 30px;
       line-height: 1.6;
     }
 
-    .heart {
-      font-size: 5rem;
-      color: #e94f6d;
-      animation: heartbeat 1.5s infinite;
-      margin-bottom: 1em;
-    }
-
-    @keyframes heartbeat {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-    }
-
     button {
-      background-color: #d94f70;
+      background-color: #ff6f91;
       border: none;
-      padding: 1em 2.5em;
-      font-size: 1.2rem;
+      padding: 15px 30px;
+      font-size: 1.1rem;
       color: white;
       border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 5px 15px rgba(217, 79, 112, 0.6);
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 16px rgba(255, 111, 145, 0.4);
     }
 
     button:hover {
-      background-color: #b03956;
+      background-color: #e85b7f;
       transform: scale(1.05);
+    }
+
+    .balloons {
+      position: absolute;
+      bottom: -100px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: -1;
+    }
+
+    .balloon {
+      width: 60px;
+      height: 80px;
+      background: #ff6f91;
+      border-radius: 50% 50% 50% 50%;
+      animation: float 6s ease-in-out infinite;
+      position: relative;
+    }
+
+    .balloon:nth-child(2) {
+      background: #ffb86f;
+      animation-delay: 2s;
+    }
+
+    .balloon:nth-child(3) {
+      background: #a0e7e5;
+      animation-delay: 4s;
+    }
+
+    .balloon:after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 20px;
+      background: #555;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-300px) rotate(10deg);
+      }
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
     }
 
     footer {
       position: absolute;
-      bottom: 20px;
+      bottom: 15px;
       font-size: 0.9rem;
-      color: #7a5a62;
+      color: #6a4e4e;
     }
   </style>
 </head>
 <body>
-  <div class="heart">❤️</div>
-  <h1>Happy Birthday!</h1>
+  <h1>Happy Birthday! 🎉</h1>
   <p>
-    To the most beautiful soul — may your day be filled with
-    endless joy, love, and magical moments. You deserve all the happiness
-    in the world. I’m so grateful to have you in my life.
+    Wishing you a day filled with love, laughter, and the warmest memories. 
+    May this year bring you endless joy and everything your heart desires. 
+    Celebrate big, smile wide, and enjoy every second!
   </p>
-  <button onclick="alert('Wishing you the happiest birthday ever! 🎉🎂🎈')">
-    Send Love
-  </button>
-  <footer>Made with ❤️ just for you</footer>
+  <button onclick="alert('🎂 Surprise! Hope your day is amazing!')">Click for a Surprise</button>
+
+  <div class="balloons">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+  </div>
+
+  <footer>Made with 💖 just for you</footer>
 </body>
 </html>
