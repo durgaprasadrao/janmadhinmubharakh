@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      font-family: 'Open Sans', sans-serif;
+      color: #4b3e2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 4rem;
+      margin-bottom: 0.2em;
+      color: #d94f70;
+      text-shadow: 1px 1px 3px #8b3a47;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin: 0 1em 2em;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .heart {
+      font-size: 5rem;
+      color: #e94f6d;
+      animation: heartbeat 1.5s infinite;
+      margin-bottom: 1em;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    button {
+      background-color: #d94f70;
+      border: none;
+      padding: 1em 2.5em;
+      font-size: 1.2rem;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(217, 79, 112, 0.6);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b03956;
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #7a5a62;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart">❤️</div>
+  <h1>Happy Birthday!</h1>
+  <p>
+    To the most beautiful soul — may your day be filled with
+    endless joy, love, and magical moments. You deserve all the happiness
+    in the world. I’m so grateful to have you in my life.
+  </p>
+  <button onclick="alert('Wishing you the happiest birthday ever! 🎉🎂🎈')">
+    Send Love
+  </button>
+  <footer>Made with ❤️ just for you</footer>
+</body>
+</html>
